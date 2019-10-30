@@ -90,7 +90,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: false,
             template: `${PATHS.src}/index.html`,
-            filename: './index.html'
+            filename: './index.html',
+            inject: false
         }),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
