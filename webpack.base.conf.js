@@ -61,11 +61,6 @@ module.exports = {
             }
         ]
     },
-    // настройка dev-server
-    devServer: {
-        overlay: true
-    },
-
     // используемые плагины
     plugins: [
         new MiniCSSExtractPlugin ({
