@@ -1,17 +1,27 @@
 const path = require("path");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 
+// список путей
+const PATHS = {
+    src: path.join(__dirname, './src'),
+    dist: path.join(__dirname, './dist'),
+    assets: 'assets/'
+}
 
 module.exports = {
+    // для привязки константы к другим файлам config
+    externals: {
+        paths: PATHS
+    },
     // точка входа
     entry: {
-        app: './src/index.js'
+        app: PATHS.src
     },
     // точка выхода
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist'
+        filename: `${PATHS.assets}js/[name].js`,
+        path: PATHS.dist,
+        publicPath: '/'
     },
     // модули
     module: {
@@ -64,7 +74,7 @@ module.exports = {
     // используемые плагины
     plugins: [
         new MiniCSSExtractPlugin ({
-            filename: "[name].css"
+            filename: `${PATHS.assets}css/[name].css`
         })
     ]
 }
