@@ -23,6 +23,22 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
             },
+            //для SCSS
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    MiniCSSExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: { sourceMap: true }
+                    }
+                ]
+            },
             //для CSS
             {
                 test: /\.css$/,
