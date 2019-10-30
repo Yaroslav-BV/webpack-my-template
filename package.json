@@ -4,7 +4,9 @@
   "description": "My template for web development with webpack 4",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production",
+    "stat": "git log --pretty=oneline"
   },
   "repository": {
     "type": "git",
