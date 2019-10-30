@@ -1,15 +1,31 @@
 const path = require("path");
 
-module.exports = { 
-    entry: { // точка выхода
+module.exports = {
+    // точка входа
+    entry: {
         app: './src/index.js'
     },
-    output: { // точка выхода
+    // точка выхода
+    output: {
         filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist'
     },
-    devServer: { // настройка dev-server
+    // модули
+    module: {
+        // правила
+        rules: [
+            // для Babel 7
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: '/node_modules/'
+            }
+        ]
+    },
+
+    // настройка dev-server
+    devServer: {
         overlay: true
     }
 }

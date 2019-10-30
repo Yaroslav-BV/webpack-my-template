@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "stat": "git log --pretty=oneline"
+    "log": "git log --pretty=oneline"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/Yaroslav-BV/webpack-my-template#readme",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
     "path": "^0.12.7",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
