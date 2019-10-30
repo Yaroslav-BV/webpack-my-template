@@ -1,1 +1,1 @@
-# webpack-my-template
+# Customized webpack 4 template for web development
