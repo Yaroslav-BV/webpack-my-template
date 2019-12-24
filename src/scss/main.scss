@@ -1,4 +1,3 @@
-
 @import "utils/libs.scss";   // библиотеки и фреймворки
 @import "utils/vars.scss";   // переменные Sass
 @import "utils/mixins.scss"; // миксины Sass
@@ -6,9 +5,38 @@
 
 
 // Основной код со стилями
+body {
+    margin: 0;
+    padding: 0;
+}
+section {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
 
-// ...
+    img {
+        width: 20%;
+        animation: 5s ease-in-out 0s normal none infinite running rot;
+    }
 
-// Основной код со стялми
+    h1 {
+        font-family: Tahoma;
+        color: #fff;
+    }
+}
 
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+// Модули страницы
 @import "modules/header.scss"; // Модули блоков
