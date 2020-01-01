@@ -41,7 +41,19 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: '[name].[ext]',
+                    outputPath: `${PATHS.assets}/img`,
+                    publicPath:  '../img'
+                }
+            },
+            // для шрифтов
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: `${PATHS.assets}/fonts`,
+                    publicPath:  '../fonts'
                 }
             },
             // для SCSS
