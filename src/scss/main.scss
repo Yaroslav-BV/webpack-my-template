@@ -37,6 +37,10 @@ section {
     }
 }
 
+.iconFA i {
+    font-size: 2em;
+    color: #fff;
+}
 
 // Модули страницы
 @import "modules/header.scss"; // Модули блоков
